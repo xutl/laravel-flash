@@ -1,0 +1,23 @@
+{
+  "name": "xutl/laravel-flash",
+  "description": "This is a Laravel flash message.",
+  "keywords": [ "flash", "laravel", "message" ],
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "XuTL\\Flash\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "laravel": {
+      "providers": [
+        "XuTL\\Flash\\FlashServiceProvider"
+      ]
+    }
+  },
+  "prefer-stable": true
+}
