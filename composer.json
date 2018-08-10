@@ -31,7 +31,10 @@
     "laravel": {
       "providers": [
         "XuTL\\Flash\\FlashServiceProvider"
-      ]
+      ],
+      "aliases": {
+        "Flash": "XuTL\\Flash\\Flash"
+      }
     }
   },
   "prefer-stable": true
