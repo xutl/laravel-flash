@@ -27,27 +27,30 @@ class FlashNotifiy
 
     /**
      * @param string $message
+     * @param string $title
      * @return FlashNotifiy
      */
-    public function success($message, $title = null)
+    public function success($message, $title = 'Successful!')
     {
         return $this->message($message, $title, 'success');
     }
 
     /**
      * @param string $message
+     * @param string $title
      * @return FlashNotifiy
      */
-    public function error($message, $title = null)
+    public function error($message, $title = 'Error')
     {
         return $this->message($message, $title, 'error');
     }
 
     /**
      * @param string $message
+     * @param string $title
      * @return FlashNotifiy
      */
-    public function warning($message, $title = null)
+    public function warning($message, $title = 'Warning')
     {
         return $this->message($message, $title, 'warning');
     }
@@ -57,7 +60,7 @@ class FlashNotifiy
      * @param string $title
      * @return FlashNotifiy
      */
-    public function info($message, $title = null)
+    public function info($message, $title = 'Tips')
     {
         return $this->message($message, 'info', $title);
     }
@@ -71,8 +74,8 @@ class FlashNotifiy
     public function message($message, $title, $type)
     {
         $this->session->flash('flash.message', $message);
-        $this->session->flash('flash.title', $title);
         $this->session->flash('flash.type', $type);
+        $this->session->flash('flash.title', $title);
         return $this;
     }
 }

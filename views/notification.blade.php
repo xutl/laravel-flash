@@ -80,7 +80,8 @@
             <i class="notification-icon fa fa-info-circle flash-icon-info"></i>
         @endif
 
-        <div class="notification__group is-with-icon"><h2 class="notification__title">{{Session::get('flash.title','Success')}}</h2>
+        <div class="notification__group is-with-icon">
+            <h2 class="notification__title">{{Session::get('flash.title','Success')}}</h2>
             <div class="notification__content">{{Session::get('flash.message')}}</div>
             <i class="notification__closeBtn fa fa-times"></i>
         </div>
