@@ -75,13 +75,13 @@
             @endif
 
             <p>{{Session::get('flash.message')}}</p>
-            <i class="icon-close fa fa-times"></i>
+            <i class="flash-icon-close fa fa-times"></i>
         </div>
 
         <script>
-            jQuery('.myflash-message').animate({top: '20px', opacity: 1}).fadeIn('fast').delay(3000).fadeOut();
-            jQuery('.icon-close').click(function () {
-                jQuery('.myflash-message').hide();
+            jQuery('.flash-message').animate({top: '20px', opacity: 1}).fadeIn('fast').delay(3000).fadeOut();
+            jQuery('.flash-icon-close').click(function () {
+                jQuery('.flash-message').hide();
             });
         </script>
     </div>
