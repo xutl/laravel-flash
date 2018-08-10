@@ -68,8 +68,6 @@
     }
 </style>
 
-
-
 @if(Session::has('flash.message'))
     <div class="flash-notification" style="top: 16px; z-index: 2015;">
         @if(Session::get('flash.type')=='success')

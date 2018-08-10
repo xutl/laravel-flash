@@ -29,46 +29,49 @@ class FlashNotifiy
      * @param string $message
      * @return FlashNotifiy
      */
-    public function success($message)
+    public function success($message, $title = null)
     {
-        return $this->message($message, 'success');
+        return $this->message($message, $title, 'success');
     }
 
     /**
      * @param string $message
      * @return FlashNotifiy
      */
-    public function error($message)
+    public function error($message, $title = null)
     {
-        return $this->message($message, 'error');
+        return $this->message($message, $title, 'error');
     }
 
     /**
      * @param string $message
      * @return FlashNotifiy
      */
-    public function warning($message)
+    public function warning($message, $title = null)
     {
-        return $this->message($message, 'warning');
+        return $this->message($message, $title, 'warning');
     }
 
     /**
      * @param string $message
+     * @param string $title
      * @return FlashNotifiy
      */
-    public function info($message)
+    public function info($message, $title = null)
     {
-        return $this->message($message, 'info');
+        return $this->message($message, 'info', $title);
     }
 
     /**
      * @param string $message
+     * @param string $title
      * @param string $type
      * @return $this
      */
-    public function message($message, $type)
+    public function message($message, $title, $type)
     {
         $this->session->flash('flash.message', $message);
+        $this->session->flash('flash.title', $title);
         $this->session->flash('flash.type', $type);
         return $this;
     }
