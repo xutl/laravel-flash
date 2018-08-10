@@ -17,7 +17,10 @@
   "autoload": {
     "psr-4": {
       "XuTL\\Flash\\": "src"
-    }
+    },
+    "files": [
+      "src/function.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
