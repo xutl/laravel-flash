@@ -5,7 +5,7 @@ use Illuminate\Session\Store;
 use PHPUnit\Framework\TestCase;
 use XuTL\Flash\FlashNotifiy;
 
-class TestFlash extends TestCase
+class FlashTest extends TestCase
 {
     /**
      * @var FlashNotifiy
